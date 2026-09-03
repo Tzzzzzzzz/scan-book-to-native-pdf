@@ -21,17 +21,17 @@ Use a new repository unless the owner explicitly selected an existing one. The r
 Tzzzzzzzz/scan-book-to-native-pdf
 ```
 
-Confirm `private` or `public` visibility and select an appropriate license before a public release. The package does not overwrite an existing repository and does not select a license on the author's behalf.
+The repository is intended to be public and now carries the MIT License in `LICENSE`. The license covers this skill package and its documentation only; it does not cover source books, reconstructed books, or third-party fonts.
 
 ## 3. Create or connect the repository
 
-From this package directory, a new private repository can be created with:
+From this package directory, a new repository can be created with:
 
 ```text
-gh repo create Tzzzzzzzz/scan-book-to-native-pdf --private --source . --remote origin --push
+gh repo create Tzzzzzzzz/scan-book-to-native-pdf --public --source . --remote origin --push
 ```
 
-Replace `--private` with `--public` only after the visibility and redistribution rights are confirmed. For an already-created empty repository:
+For an already-created empty repository:
 
 ```text
 git remote add origin https://github.com/Tzzzzzzzz/scan-book-to-native-pdf.git
@@ -47,6 +47,7 @@ git status --short
 git log -1 --oneline
 git ls-tree -r --name-only HEAD
 python scripts/validate_wikiskill.py .
+Get-Content LICENSE -TotalCount 3
 ```
 
 The repository should contain the skill package, WikiSkill evidence, scripts, references, and the two Markdown guides. It should not contain source books, reconstructed book PDFs, rendered page images, OCR caches, or credentials. `RELEASE-MANIFEST.json` records hashes for every packaged file except the manifest itself.

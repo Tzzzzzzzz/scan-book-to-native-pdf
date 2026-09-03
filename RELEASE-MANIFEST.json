@@ -5,10 +5,16 @@
   "method_source": "https://arxiv.org/abs/2608.27454",
   "runtime_revision": "2132DE2DFB4A1158D8E4004B1417F79E5F37CEAE682D1890712B2F068F20CAE3",
   "iteration": 2,
-  "generated_utc": "2026-09-03T03:12:22.4727327Z",
+  "generated_utc": "2026-09-03T03:24:51.511862Z",
   "source_documents_included": false,
   "generated_book_pdfs_included": false,
   "manifest_excludes_self": true,
+  "license": {
+    "spdx_id": "MIT",
+    "file": "LICENSE",
+    "copyright_holder": "Tzzzzzzzz",
+    "copyright_year": 2026
+  },
   "files": [
     {
       "path": ".gitattributes",
@@ -96,9 +102,14 @@
       "sha256": "24C29381C0D705BBA89A5AA804FF62EE27F62604EBF680E24A0B507BE23C0925"
     },
     {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "C84F037772A361FAD706803921EF08242724674E1BD77F9DCFCB6225B53243ED"
+    },
+    {
       "path": "PUBLISHING.md",
-      "bytes": 2220,
-      "sha256": "5C25C1243236C46C93D52F52749019FDF7C9E18AC23AAF3F520E677459077DD6"
+      "bytes": 2161,
+      "sha256": "D55A132DF022EEBD83692ECCA546380B3D3850B368534114D1152EB2A6559B08"
     },
     {
       "path": "PURPOSE.md",
@@ -167,8 +178,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6723,
-      "sha256": "1C410E02AA6930C1A0BB88A0BDB5FAE9FCCC96A253C9F17C580AB3D59552BCB3"
+      "bytes": 6781,
+      "sha256": "9CB93F4F2618E623361AA095AA2841440F5381974194E3722287851E441AFE6F"
     },
     {
       "path": "references/evolution-protocol.md",
@@ -400,6 +411,6 @@
     "quick_validate": "pass",
     "wikiskill_validate": "pass",
     "runtime_revision": "2132DE2DFB4A1158D8E4004B1417F79E5F37CEAE682D1890712B2F068F20CAE3",
-    "file_count": 77
+    "file_count": 78
   }
 }
