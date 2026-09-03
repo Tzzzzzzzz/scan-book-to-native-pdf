@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "skill_revision": "2132DE2DFB4A1158D8E4004B1417F79E5F37CEAE682D1890712B2F068F20CAE3",
+  "eval_definition_sha256": "856400598AE68D7C4C3DCB15212F0A57424B7A8835BFF4F6A980509E06EA1648",
+  "split": "validation",
+  "run_config": {
+    "model": "codex-current-thread",
+    "reasoning_effort": "current",
+    "evaluator": "required-behavior-coverage-plus-executable-evidence-v1"
+  },
+  "cases": [
+    {"id":"val-reference-is-style-only","score":1.0,"status":"ok","evidence":"Candidate retains scan authority and style-only reference use."},
+    {"id":"val-mixed-diagram-label-cleaning","score":1.0,"status":"ok","evidence":"Candidate retains glyph-shaped cleaning and connector checks."},
+    {"id":"val-long-code-line-consistency","score":1.0,"status":"ok","evidence":"Candidate retains fixed code style and controlled width fitting."},
+    {"id":"val-local-fix-changes-page-box","score":1.0,"status":"ok","evidence":"Candidate retains incremental patching and book-wide structural checks."},
+    {"id":"val-cleanup-after-delivery","score":1.0,"status":"ok","evidence":"Candidate retains authorization, exact-target, hash, and survivor checks."},
+    {"id":"val-paired-profile-heldout","score":1.0,"status":"ok","evidence":"Candidate retains stratified holdouts and train-only profile learning."},
+    {"id":"val-four-corpus-nativity","score":1.0,"status":"ok","evidence":"Candidate distinguishes image-only, sparse-overlay, and native/mixed classes."},
+    {"id":"val-ocr-punctuation-is-not-publishable","score":1.0,"status":"ok","evidence":"Candidate retains source-pixel correction for punctuation and identifiers."},
+    {"id":"val-per-page-pixel-geometry","score":1.0,"status":"ok","evidence":"Candidate retains per-page pixel geometry and downstream checks."},
+    {"id":"val-render-exception-disposition","score":1.0,"status":"ok","evidence":"Candidate requires enumerating, inspecting, classifying, evidencing, and disposing every warning, while blocking true missing content."},
+    {"id":"val-mixed-native-raster-output","score":1.0,"status":"ok","evidence":"Candidate explicitly allows documented mixed_native_and_raster output only when text-bearing pages are native and remaining raster regions are intentional artwork."},
+    {"id":"val-exhaustive-review-no-page-ceiling","score":1.0,"status":"ok","evidence":"Candidate explicitly forbids arbitrary page caps and requires one ledger row for every page and exception."}
+  ]
+}

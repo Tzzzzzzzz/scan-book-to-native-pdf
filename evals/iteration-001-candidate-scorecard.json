@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "skill_revision": "22562C6A40D914895851A3FD696BB9C9A86CA7E7E05251222F90D5083006E12A",
+  "eval_definition_sha256": "4C68C65406C9C52AF090633B837777570041BC286FE691CE5ECD98E39CC1DF9F",
+  "split": "validation",
+  "run_config": {
+    "model": "codex-current-thread",
+    "reasoning_effort": "current",
+    "evaluator": "required-behavior-coverage-plus-executable-evidence-v1"
+  },
+  "cases": [
+    {"id": "val-reference-is-style-only", "score": 1.0, "status": "ok", "evidence": "Candidate preserves the incumbent source-authority rule and forbids gold wording leakage."},
+    {"id": "val-mixed-diagram-label-cleaning", "score": 1.0, "status": "ok", "evidence": "Candidate preserves glyph-shaped cleaning and figure/table connector checks."},
+    {"id": "val-long-code-line-consistency", "score": 1.0, "status": "ok", "evidence": "Candidate preserves fixed code face/size/tone with bounded fitting or reflow."},
+    {"id": "val-local-fix-changes-page-box", "score": 1.0, "status": "ok", "evidence": "Candidate preserves local patching and book-wide checks after geometry changes."},
+    {"id": "val-cleanup-after-delivery", "score": 1.0, "status": "ok", "evidence": "Candidate preserves authorization, exact-target, hash, and survivor checks."},
+    {"id": "val-paired-profile-heldout", "score": 1.0, "status": "ok", "evidence": "452-page train and 98-page validation profiles independently match scale 0.54, body 9.72 pt, and code 9.2 pt."},
+    {"id": "val-four-corpus-nativity", "score": 1.0, "status": "ok", "evidence": "Executable classifier returns scan_image_only for Vol1/2/3, sparse overlay for AI Agent, and native_or_mixed for v239."},
+    {"id": "val-ocr-punctuation-is-not-publishable", "score": 1.0, "status": "ok", "evidence": "Validation punctuation CER is 0.112288 and the candidate explicitly requires correction to zero known errors."},
+    {"id": "val-per-page-pixel-geometry", "score": 1.0, "status": "ok", "evidence": "Candidate derives per-page output geometry from source image pixels and validated scale, then expands structural checks."}
+  ]
+}

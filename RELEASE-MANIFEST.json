@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.0",
+  "package": "scan-book-to-native-pdf",
+  "method": "WikiSkill",
+  "method_source": "https://arxiv.org/abs/2608.27454",
+  "runtime_revision": "2132DE2DFB4A1158D8E4004B1417F79E5F37CEAE682D1890712B2F068F20CAE3",
+  "iteration": 2,
+  "generated_utc": "2026-09-03T03:12:22.4727327Z",
+  "source_documents_included": false,
+  "generated_book_pdfs_included": false,
+  "manifest_excludes_self": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 84,
+      "sha256": "D92CA5E0C6411A4844FF0E1C0B570445D86F51F1BB98473503C383B8D7074491"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 129,
+      "sha256": "A9F731B91C7B5575A2A427646722441A1CBEA149C612E197353BF52FD1E79F6D"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 278,
+      "sha256": "33C09E261719EC6EA94EC8F64D48B384F924D7375FF8CE144F0F139EDE7B5AE6"
+    },
+    {
+      "path": "assets/xiangshan-v1-v239-profile.json",
+      "bytes": 5685,
+      "sha256": "FE164ECAC2AFDE9C4FF0C41B83689EE6D5DCE913F2C989E7497DE51AA96CA5D3"
+    },
+    {
+      "path": "evals/cases.json",
+      "bytes": 13517,
+      "sha256": "856400598AE68D7C4C3DCB15212F0A57424B7A8835BFF4F6A980509E06EA1648"
+    },
+    {
+      "path": "evals/iteration-001-candidate-scorecard.json",
+      "bytes": 2095,
+      "sha256": "5F8EFC1AB64C4690B0D8ADB1990B8B10782B4BE88C2E87F76E5DCFCF418DBE86"
+    },
+    {
+      "path": "evals/iteration-001-decision.json",
+      "bytes": 1062,
+      "sha256": "E680B66F5501845A3345C09CDE65AFA845BA96A7178751CD94B4785EE4E29A33"
+    },
+    {
+      "path": "evals/iteration-001-incumbent-scorecard.json",
+      "bytes": 1978,
+      "sha256": "DDA5C64328026A67F891C5D84929994ECB2D4BFD5FCC59218FA993333703913C"
+    },
+    {
+      "path": "evals/iteration-001-proposal.json",
+      "bytes": 924,
+      "sha256": "C0C2E53A2448341AACF8694B96A3DE05A5D89BCDD16B4DC352075844735ABC48"
+    },
+    {
+      "path": "evals/iteration-001-test-ocr-report.json",
+      "bytes": 2863,
+      "sha256": "DA9315F80AD9F6D551DE41B73DAFF1BC53F493F3F3CCE4F6FA1611721BAF7308"
+    },
+    {
+      "path": "evals/iteration-001-test-summary.md",
+      "bytes": 1596,
+      "sha256": "32EBDA403DFD6B460C8CD84A686DC7EEDA5D4DD0F0BE737D799DCE36C975CA18"
+    },
+    {
+      "path": "evals/iteration-002-candidate-scorecard.json",
+      "bytes": 2463,
+      "sha256": "52F6AC3D0F0720E89E623E11875A3AF84C4959785E5AE43155BBD89017025F91"
+    },
+    {
+      "path": "evals/iteration-002-decision.json",
+      "bytes": 1188,
+      "sha256": "C5C6FD3E73B5121798AED9C8D12B0FF4B3F27F84BC9AAC15AC383E26F1B5A57C"
+    },
+    {
+      "path": "evals/iteration-002-incumbent-scorecard.json",
+      "bytes": 2582,
+      "sha256": "AA0F51490C3035A9ED1EF3936776A5471C151A1C31744C1CD2AF2E4325E2B609"
+    },
+    {
+      "path": "evals/iteration-002-proposal.json",
+      "bytes": 984,
+      "sha256": "292B73C47849F7E60C39E7B08341CE87D0A23A602EDDC458143AC9B9F7DE39F2"
+    },
+    {
+      "path": "evals/paired-vol1-pages.json",
+      "bytes": 181968,
+      "sha256": "D3A2D6AF43ABF503A528F5E0488E098CECB3CF0B2A91DE559BC2459F10C197C3"
+    },
+    {
+      "path": "evals/README.md",
+      "bytes": 1790,
+      "sha256": "24C29381C0D705BBA89A5AA804FF62EE27F62604EBF680E24A0B507BE23C0925"
+    },
+    {
+      "path": "PUBLISHING.md",
+      "bytes": 2220,
+      "sha256": "5C25C1243236C46C93D52F52749019FDF7C9E18AC23AAF3F520E677459077DD6"
+    },
+    {
+      "path": "PURPOSE.md",
+      "bytes": 2956,
+      "sha256": "2F6907A16E7EB3DFED37957AD825236FAD3A72F907D3F9EFCF62F1FF84349CA0"
+    },
+    {
+      "path": "raw/iteration-000/manifest.json",
+      "bytes": 674,
+      "sha256": "553B4F843AD221757C25C1F69384A52623D0C5F7F94F01823918A6E34977EEFD"
+    },
+    {
+      "path": "raw/iteration-000/traces/user-feedback.md",
+      "bytes": 1903,
+      "sha256": "1418AB2D07F06F8221544670D179754783D7E2422B46A0D60574C7EA30BE2230"
+    },
+    {
+      "path": "raw/iteration-000/traces/verification-results.md",
+      "bytes": 1103,
+      "sha256": "B5E2197A5542DE143EA3A3F57507A5D1F51C2A0515CC2A42E3F89CB75771F662"
+    },
+    {
+      "path": "raw/iteration-001/manifest.json",
+      "bytes": 907,
+      "sha256": "A92AD2B58641A252C2B1F418A3F661ED208DF632DA894D9DCEA6659EE6740220"
+    },
+    {
+      "path": "raw/iteration-001/traces/corpus-inventory.json",
+      "bytes": 2991,
+      "sha256": "2EEFB853E05B09D492DF4B6EDBC48D0DDE236EEF7B85FCD86A5D95649C230E94"
+    },
+    {
+      "path": "raw/iteration-001/traces/paired-training-results.md",
+      "bytes": 2946,
+      "sha256": "DB7C7898930D8465642E86433CE4D6404C86C712778753008F914518AAFA9EB2"
+    },
+    {
+      "path": "raw/iteration-001/traces/user-contract.md",
+      "bytes": 1957,
+      "sha256": "1F4FFA8573A8848BA5E79FB614073CD8A65122E9FA2E6D8C709613FB054BD268"
+    },
+    {
+      "path": "raw/iteration-002/manifest.json",
+      "bytes": 823,
+      "sha256": "295FDDC5070CE1918B868C0751690694476C716426B148CE2A272A209903F549"
+    },
+    {
+      "path": "raw/iteration-002/traces/exception-triage.json",
+      "bytes": 1380,
+      "sha256": "23017DE379844C70A044529B652E0F5FA6C28E65E172EBD916A23B369016E4AC"
+    },
+    {
+      "path": "raw/iteration-002/traces/final-qa-observations.md",
+      "bytes": 1475,
+      "sha256": "25598E8637C9F12584F4C4441F3A821B8C4ADD2076896207C86914256AAA395A"
+    },
+    {
+      "path": "raw/iteration-002/traces/user-contract.md",
+      "bytes": 1371,
+      "sha256": "641057B87B23DA69CA42A79C599BAA94B784B8AE479CA7AC6C06E6E21DD423C4"
+    },
+    {
+      "path": "raw/README.md",
+      "bytes": 520,
+      "sha256": "A5CF7570A03BAE167181E660E2FC4EB3866A1A95353F92753A7107C24EA04C98"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6723,
+      "sha256": "1C410E02AA6930C1A0BB88A0BDB5FAE9FCCC96A253C9F17C580AB3D59552BCB3"
+    },
+    {
+      "path": "references/evolution-protocol.md",
+      "bytes": 2337,
+      "sha256": "2B3F1DC835483C548265C1A4080A5167B38768B532288A243BE2F7BDDF5BE84D"
+    },
+    {
+      "path": "references/ocr-layout-model.md",
+      "bytes": 2901,
+      "sha256": "313D2888957CB23A32C496B387B941814428AD1125D1829198EBF348FF30F6C7"
+    },
+    {
+      "path": "references/paired-gold-training.md",
+      "bytes": 4453,
+      "sha256": "BCE19E48B32AEB97361F81856589612883FE8F5F8E403B2FBBB5796C7463D623"
+    },
+    {
+      "path": "references/qa-gates.md",
+      "bytes": 6830,
+      "sha256": "B2005FD6B0DAF66078B5F3B81FFA5E6CBA435508A1CADE7047002605D4F84B59"
+    },
+    {
+      "path": "references/workflow.md",
+      "bytes": 9098,
+      "sha256": "6D2ADBEECE2992D15ACB1BCC4ACEB0C281B40596691E6377F55BA6D455D9DCE0"
+    },
+    {
+      "path": "scripts/_pdf_utils.py",
+      "bytes": 3233,
+      "sha256": "83C1C26F7F3831263068EE880814735CDB272603B2DD032743E07423E03C87A8"
+    },
+    {
+      "path": "scripts/bbox_audit.py",
+      "bytes": 4325,
+      "sha256": "5CDDBC3954F2A1D912047C05A8E00B3CD853176E3A323B20D22A58B5C638DCC3"
+    },
+    {
+      "path": "scripts/build_paired_split.py",
+      "bytes": 7002,
+      "sha256": "F0057CBA3FA1C72BA790B43AC45E4AA3691E6E31B20585A3E7A249F1667F04ED"
+    },
+    {
+      "path": "scripts/compare_pdf_revisions.py",
+      "bytes": 5089,
+      "sha256": "76CB65EC8C81B14155E286DCE76E30B5DD89ABEB98F3A08A1E2E673AA875C741"
+    },
+    {
+      "path": "scripts/derive_layout_from_native_pdf.py",
+      "bytes": 18523,
+      "sha256": "7C36B75E3E447F4F45B0BC1D794FCB6E90108ADA28B73057F9C75035E52FF151"
+    },
+    {
+      "path": "scripts/font_audit.py",
+      "bytes": 3439,
+      "sha256": "4AD72C295CFB10A4170851A5EC9CE259402F1429D97B4C5F67093F32911E3422"
+    },
+    {
+      "path": "scripts/gate_candidate.py",
+      "bytes": 9651,
+      "sha256": "81180241759B1681A41DAE5FF931FB1F3747054A4E8EA94FB46E02A44C249E96"
+    },
+    {
+      "path": "scripts/learn_gold_profile.py",
+      "bytes": 8639,
+      "sha256": "CEA16483BAED7F1A79693A4D3C11193CD53CCE9AF3B262535D14594B46893D88"
+    },
+    {
+      "path": "scripts/ocr_gold_probe.py",
+      "bytes": 10545,
+      "sha256": "0583810C4471C52D6404B60E06B9FE4D7717ECEA120C15B76E43512081F66CF6"
+    },
+    {
+      "path": "scripts/patch_chapter_banner_headers.py",
+      "bytes": 4382,
+      "sha256": "D8950BA1958284B5665055DFC6DCEE0439ED44032AF62342C31AC023BBBCD34B"
+    },
+    {
+      "path": "scripts/patch_layout_spacing.py",
+      "bytes": 1008,
+      "sha256": "35F64D41BA9C2E8153BB8044328A36707813BE99DA3EEFDD75080AA2C4EF0961"
+    },
+    {
+      "path": "scripts/pdf_inventory.py",
+      "bytes": 3639,
+      "sha256": "55EEE5A1288E8E6BCA53649013E4055AD2BB3F7911E280EFF02E256998913CB3"
+    },
+    {
+      "path": "scripts/pdf_nativity.py",
+      "bytes": 5362,
+      "sha256": "804C82D978C4B338B3749BFDEEAD621F56B1089833F83A732DBD484B83AF2E42"
+    },
+    {
+      "path": "scripts/render_band_audit.py",
+      "bytes": 5223,
+      "sha256": "D8FFD4592307E09536C057844D64974E62348BE434CFBC719176D6AB0E1C46A3"
+    },
+    {
+      "path": "scripts/replace_pdf_page.py",
+      "bytes": 4067,
+      "sha256": "AD80F88BBA60B1190168EEB23C1CE207F3FB11F33AAF0BAA705DC0644079DC30"
+    },
+    {
+      "path": "scripts/replace_pdf_pages.py",
+      "bytes": 5333,
+      "sha256": "63708AD6CA0084830F7950FEA29EE8D81ECD4FBC35473E22985433AB5FEACEA1"
+    },
+    {
+      "path": "scripts/skill_revision.py",
+      "bytes": 3059,
+      "sha256": "0AB7EFE65C7821C51CF3555149E45BF00A267CF50449AEC2430D29A85432B6C6"
+    },
+    {
+      "path": "scripts/validate_wikiskill.py",
+      "bytes": 10758,
+      "sha256": "CDE70CFC740F14B55C65E617BD070F3CAEDCBC7E2F1FF47B5FBA42F62A02FBBC"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 6819,
+      "sha256": "568608413DC9229B8BE5E77F25EC9AF6F1FFCF29D77B95CB6D6A36E3ED142C8E"
+    },
+    {
+      "path": "wiki/index.md",
+      "bytes": 4368,
+      "sha256": "25054CE9C3608532E13B29B49F01BDCABD1E25F270DCCE44003B761E8F33CE4E"
+    },
+    {
+      "path": "wiki/logs.md",
+      "bytes": 3994,
+      "sha256": "0F6E62E22E4E6C70A22168115F49105DDD75579EC1B5403B96ED458B1C423480"
+    },
+    {
+      "path": "wiki/patterns/audit-tools-produce-candidates-not-proof.md",
+      "bytes": 770,
+      "sha256": "7826A12220BC320C1657B328D20DF57F8EDAA5DFAFF8ADD02C906D18CA86DCFB"
+    },
+    {
+      "path": "wiki/patterns/cleanup-follows-promotion-and-hashing.md",
+      "bytes": 698,
+      "sha256": "2154F0A513339A995A2F1A35B58470D774A6335ED7F6BE5E7F30C49E9F6D4C8C"
+    },
+    {
+      "path": "wiki/patterns/code-style-must-be-fixed-before-width-fitting.md",
+      "bytes": 648,
+      "sha256": "7FF655D6B8C7410DC1C6B159CFC9CC359000742692E4C4E53FB6594A7B68BB4C"
+    },
+    {
+      "path": "wiki/patterns/exhaustive-review-requires-a-page-ledger.md",
+      "bytes": 644,
+      "sha256": "F48389E7219AA514E355342EEEF9A087A83018B363D62D9B9003D14B47163402"
+    },
+    {
+      "path": "wiki/patterns/explicit-render-exception-triage.md",
+      "bytes": 819,
+      "sha256": "73E867171061027BE1292EABD4D95CB5FEDDE2847353264DFEA7F2BC3FACC4E2"
+    },
+    {
+      "path": "wiki/patterns/extracted-spacing-can-be-geometric.md",
+      "bytes": 615,
+      "sha256": "77ADEB8DAE9D17E04288E739DCC4F316137E1E265F44B4A1C915FB63F091E8CE"
+    },
+    {
+      "path": "wiki/patterns/geometry-changes-expand-the-regression-scope.md",
+      "bytes": 664,
+      "sha256": "21C547D6557F17D9F31A3D4D2EC349ACF9F6514A164D9250FF0E42C57C52D279"
+    },
+    {
+      "path": "wiki/patterns/glyph-shaped-cleaning-preserves-figures-and-tables.md",
+      "bytes": 673,
+      "sha256": "23ED9FEA9FE83A5F6E25C9AFC5B0BABE4144B83A7F238E1C0F8BBE00CE6AA94A"
+    },
+    {
+      "path": "wiki/patterns/incremental-page-patching-preserves-verified-work.md",
+      "bytes": 725,
+      "sha256": "9F52A7DC2843CE1669364E61B376027D0CAE4160F9B0334801854CCC0447E8EB"
+    },
+    {
+      "path": "wiki/patterns/native-reconstruction-removes-raster-glyphs.md",
+      "bytes": 702,
+      "sha256": "09210DDC0B561FABA4391E93430EBAA986338856A9C30FDC0AA9D5B1CF961A3E"
+    },
+    {
+      "path": "wiki/patterns/ocr-backends-need-smoke-tests-and-fallbacks.md",
+      "bytes": 738,
+      "sha256": "FB42C6C685AA4A507EB42218D3854FF7F719A9BAD74FC0210201085E1FE16E43"
+    },
+    {
+      "path": "wiki/patterns/page-geometry-follows-source-pixels-not-source-pdf-boxes.md",
+      "bytes": 749,
+      "sha256": "A0D2F487E05A1451745B1541C5753C35CDF297E11C1C066101EA340B979E3AA1"
+    },
+    {
+      "path": "wiki/patterns/paired-gold-training-needs-stratified-holdouts.md",
+      "bytes": 779,
+      "sha256": "3CCAE1C987C79CBB0BA14CD2A415CA438BC0D3AD1E2CB5639FCB0CB049E747D2"
+    },
+    {
+      "path": "wiki/patterns/series-style-profiles-are-conditional.md",
+      "bytes": 721,
+      "sha256": "AC142770EA02C947950D4CC2D9F6ADDC5946C4BB829A5F9E35D5BE65C8059C9D"
+    },
+    {
+      "path": "wiki/patterns/source-pixels-are-semantic-authority.md",
+      "bytes": 628,
+      "sha256": "D0378C206AC7F07DEDBB82C9A4E5656790BFEFF3ED522D5E028945E323817951"
+    },
+    {
+      "path": "wiki/patterns/text-operators-may-only-be-a-watermark.md",
+      "bytes": 717,
+      "sha256": "AE9FB9BE3FFA2ACC8173F8096DE8D126C387B4D4C316DADE65CA8BB586A464F1"
+    },
+    {
+      "path": "wiki/README.md",
+      "bytes": 659,
+      "sha256": "1E0EB0825C86EE450042BC9A941F77E94413B9C685B4B64B55D8E91D90FBF05D"
+    },
+    {
+      "path": "wiki/skill-impact.md",
+      "bytes": 4802,
+      "sha256": "78778821D10AAF9C23D68A641DBAF25BE1597F1A71622EE5510DF5E6492940E7"
+    },
+    {
+      "path": "wikiskill.json",
+      "bytes": 1404,
+      "sha256": "F1E46856CDF95AB6BCAEF71092F59AEFA0441B40773FD0C4BC0A243F695DBAE7"
+    }
+  ],
+  "validation": {
+    "quick_validate": "pass",
+    "wikiskill_validate": "pass",
+    "runtime_revision": "2132DE2DFB4A1158D8E4004B1417F79E5F37CEAE682D1890712B2F068F20CAE3",
+    "file_count": 77
+  }
+}

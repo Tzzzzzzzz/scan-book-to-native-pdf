@@ -1,0 +1,15 @@
+{
+  "action": "patch",
+  "name": "scan-book-to-native-pdf",
+  "edits": [
+    {
+      "op": "insert_after",
+      "target": "Read references/workflow.md before the first reconstruction.",
+      "content": "Route paired source/gold training through a frozen category-stratified split; learn aggregate style and geometry from training pages only; validate independently; reserve test pages until all choices are frozen. Keep source pixels as semantic authority and prohibit gold wording leakage."
+    },
+    {
+      "op": "append",
+      "content": "Add repeat-aware PDF nativity classification, a paired split builder, aggregate gold-profile learner, OCR backend probe/fallback, the conditional Xiangshan v239 profile, and QA gates for sparse overlays, per-page pixel geometry, and non-publishable raw OCR. Preserve every incumbent reconstruction, incremental correction, exhaustive review, and cleanup behavior."
+    }
+  ]
+}

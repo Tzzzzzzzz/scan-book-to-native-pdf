@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "observations": [
+    {
+      "kind": "render_band",
+      "scope": "Xiangshan Vol1",
+      "count": 3,
+      "classes": ["scan_edge_artifact", "scan_speckle"],
+      "true_missing_content": 0,
+      "evidence": "qa/final/vol1-render-band-review-rule-v1.json"
+    },
+    {
+      "kind": "render_band",
+      "scope": "AI Agent",
+      "count": 328,
+      "classes": ["scanner_watermark", "figure_internal_contrast"],
+      "true_missing_content": 0,
+      "evidence": "qa/final/agent-render-band-review-rule-v1.json"
+    },
+    {
+      "kind": "render_band",
+      "scope": "Xiangshan Vol3 page 165",
+      "count": 1,
+      "classes": ["normalization_baseline_shift"],
+      "true_missing_content": 0,
+      "evidence": "qa/final/vol3-render-band-review-separators-v3b.json"
+    },
+    {
+      "kind": "bbox",
+      "scope": "rotated title and diagram labels",
+      "count": 7,
+      "classes": ["source_intended_adjacent_labels"],
+      "true_semantic_overlap": 0,
+      "evidence": "qa/final/vol1-bbox-audit-final.json, qa/final/vol2-bbox-audit-final.json, qa/final/vol3-bbox-audit-final.json"
+    }
+  ],
+  "rule": "An automated exception blocks acceptance only after readable source/candidate review identifies true missing or incoherent content; every accepted artifact or normalization difference must have an explicit disposition ledger."
+}

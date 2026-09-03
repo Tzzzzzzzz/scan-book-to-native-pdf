@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "skill_revision": "E645E793F6942299E10F6EB63739E033001E3AD9DBD6F49783A5950E0D5F6112",
+  "eval_definition_sha256": "856400598AE68D7C4C3DCB15212F0A57424B7A8835BFF4F6A980509E06EA1648",
+  "split": "validation",
+  "run_config": {
+    "model": "codex-current-thread",
+    "reasoning_effort": "current",
+    "evaluator": "required-behavior-coverage-plus-executable-evidence-v1"
+  },
+  "cases": [
+    {"id":"val-reference-is-style-only","score":1.0,"status":"ok","evidence":"Current skill makes scan pixels semantic authority and limits the reference to style."},
+    {"id":"val-mixed-diagram-label-cleaning","score":1.0,"status":"ok","evidence":"Current skill requires glyph masks, connector preservation, and crop inspection."},
+    {"id":"val-long-code-line-consistency","score":1.0,"status":"ok","evidence":"Current skill fixes shared code style before bounded fitting or reflow."},
+    {"id":"val-local-fix-changes-page-box","score":1.0,"status":"ok","evidence":"Current skill expands checks after geometry/resource changes and retains a baseline."},
+    {"id":"val-cleanup-after-delivery","score":1.0,"status":"ok","evidence":"Current skill requires authorization, exact targets, hashes, and survivor inventory."},
+    {"id":"val-paired-profile-heldout","score":1.0,"status":"ok","evidence":"Current skill requires deterministic paired splits and independent profile validation."},
+    {"id":"val-four-corpus-nativity","score":1.0,"status":"ok","evidence":"Current skill uses repeat-aware nativity classification and distinguishes sparse overlays."},
+    {"id":"val-ocr-punctuation-is-not-publishable","score":1.0,"status":"ok","evidence":"Current skill treats CER as diagnostic and requires source-backed corrections."},
+    {"id":"val-per-page-pixel-geometry","score":1.0,"status":"ok","evidence":"Current skill derives geometry from source pixels and rechecks downstream structure."},
+    {"id":"val-render-exception-disposition","score":0.5,"status":"ok","evidence":"Current skill asks for readable warning resolution but does not require a structured class/evidence/disposition record."},
+    {"id":"val-mixed-native-raster-output","score":0.5,"status":"ok","evidence":"Current skill documents intentional raster pages but its nativity gate names native_or_mixed and does not explicitly allow documented mixed_native_and_raster candidates."},
+    {"id":"val-exhaustive-review-no-page-ceiling","score":0.75,"status":"ok","evidence":"Current skill requires every page and a ledger, but does not explicitly forbid an arbitrary page-count cap."}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "skill_revision": "5B706786C9E19B2855FE89453C0DCACB027124518EAC7276315057331AFA008D",
+  "eval_definition_sha256": "4C68C65406C9C52AF090633B837777570041BC286FE691CE5ECD98E39CC1DF9F",
+  "split": "validation",
+  "run_config": {
+    "model": "codex-current-thread",
+    "reasoning_effort": "current",
+    "evaluator": "required-behavior-coverage-plus-executable-evidence-v1"
+  },
+  "cases": [
+    {"id": "val-reference-is-style-only", "score": 1.0, "status": "ok", "evidence": "Incumbent explicitly makes source pixels semantic authority and references style-only."},
+    {"id": "val-mixed-diagram-label-cleaning", "score": 1.0, "status": "ok", "evidence": "Incumbent requires glyph masks, connector preservation, and crop inspection."},
+    {"id": "val-long-code-line-consistency", "score": 1.0, "status": "ok", "evidence": "Incumbent fixes code style before bounded scaling or reflow."},
+    {"id": "val-local-fix-changes-page-box", "score": 1.0, "status": "ok", "evidence": "Incumbent expands checks after shared geometry or resource changes."},
+    {"id": "val-cleanup-after-delivery", "score": 1.0, "status": "ok", "evidence": "Incumbent requires authorization, exact targets, final hashes, and survivor inventory."},
+    {"id": "val-paired-profile-heldout", "score": 0.0, "status": "ok", "evidence": "Incumbent has no paired split, aggregate profile learner, or held-out profile comparison."},
+    {"id": "val-four-corpus-nativity", "score": 0.25, "status": "ok", "evidence": "Incumbent warns about full-page scans but has no repeat-aware sparse-overlay classifier."},
+    {"id": "val-ocr-punctuation-is-not-publishable", "score": 1.0, "status": "ok", "evidence": "Incumbent already treats OCR as a hypothesis and requires source-backed punctuation correction."},
+    {"id": "val-per-page-pixel-geometry", "score": 0.0, "status": "ok", "evidence": "Incumbent says to match source page boxes and has no source-pixel-to-point calibration."}
+  ]
+}

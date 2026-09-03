@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "source": "RISC-V CPU芯片设计 香山源代码剖析 第1卷.pdf",
+  "gold": "RISC-V_CPU_Xiangshan_Vol1_native_reconstructed_checked_v239.pdf",
+  "requested_backend": "auto",
+  "pages": [
+    1,
+    7,
+    40,
+    73,
+    95,
+    163,
+    382
+  ],
+  "aggregate_semantic_cer": 0.011874,
+  "aggregate_punctuation_cer": 0.12362,
+  "details": [
+    {
+      "page": 1,
+      "backend": "paddle",
+      "lines": 10,
+      "mean_confidence": 0.997893,
+      "semantic_characters": 85,
+      "semantic_distance": 31,
+      "semantic_cer": 0.364706,
+      "punctuation_characters": 3,
+      "punctuation_distance": 0,
+      "punctuation_cer": 0.0,
+      "backend_errors": []
+    },
+    {
+      "page": 7,
+      "backend": "paddle",
+      "lines": 33,
+      "mean_confidence": 0.995005,
+      "semantic_characters": 1363,
+      "semantic_distance": 5,
+      "semantic_cer": 0.003668,
+      "punctuation_characters": 4,
+      "punctuation_distance": 2,
+      "punctuation_cer": 0.5,
+      "backend_errors": []
+    },
+    {
+      "page": 40,
+      "backend": "paddle",
+      "lines": 59,
+      "mean_confidence": 0.974616,
+      "semantic_characters": 1633,
+      "semantic_distance": 5,
+      "semantic_cer": 0.003062,
+      "punctuation_characters": 99,
+      "punctuation_distance": 4,
+      "punctuation_cer": 0.040404,
+      "backend_errors": []
+    },
+    {
+      "page": 73,
+      "backend": "paddle",
+      "lines": 35,
+      "mean_confidence": 0.990493,
+      "semantic_characters": 1676,
+      "semantic_distance": 12,
+      "semantic_cer": 0.00716,
+      "punctuation_characters": 27,
+      "punctuation_distance": 9,
+      "punctuation_cer": 0.333333,
+      "backend_errors": []
+    },
+    {
+      "page": 95,
+      "backend": "paddle",
+      "lines": 54,
+      "mean_confidence": 0.988498,
+      "semantic_characters": 2249,
+      "semantic_distance": 30,
+      "semantic_cer": 0.013339,
+      "punctuation_characters": 157,
+      "punctuation_distance": 24,
+      "punctuation_cer": 0.152866,
+      "backend_errors": []
+    },
+    {
+      "page": 163,
+      "backend": "paddle",
+      "lines": 41,
+      "mean_confidence": 0.983346,
+      "semantic_characters": 1746,
+      "semantic_distance": 26,
+      "semantic_cer": 0.014891,
+      "punctuation_characters": 135,
+      "punctuation_distance": 12,
+      "punctuation_cer": 0.088889,
+      "backend_errors": []
+    },
+    {
+      "page": 382,
+      "backend": "paddle",
+      "lines": 73,
+      "mean_confidence": 0.92462,
+      "semantic_characters": 1354,
+      "semantic_distance": 11,
+      "semantic_cer": 0.008124,
+      "punctuation_characters": 28,
+      "punctuation_distance": 5,
+      "punctuation_cer": 0.178571,
+      "backend_errors": []
+    }
+  ]
+}

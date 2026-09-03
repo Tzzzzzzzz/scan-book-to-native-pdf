@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "iteration": 2,
+  "immutable": true,
+  "trace_policy": "observable_actions_and_outputs_only",
+  "files": [
+    {
+      "path": "raw/iteration-002/traces/user-contract.md",
+      "sha256": "641057B87B23DA69CA42A79C599BAA94B784B8AE479CA7AC6C06E6E21DD423C4"
+    },
+    {
+      "path": "raw/iteration-002/traces/final-qa-observations.md",
+      "sha256": "25598E8637C9F12584F4C4441F3A821B8C4ADD2076896207C86914256AAA395A"
+    },
+    {
+      "path": "raw/iteration-002/traces/exception-triage.json",
+      "sha256": "23017DE379844C70A044529B652E0F5FA6C28E65E172EBD916A23B369016E4AC"
+    }
+  ],
+  "artifacts": {
+    "total_delivery_pages": 1935,
+    "delivery_manifest": "qa/final/four-book-delivery-manifest-final.json",
+    "page_ledger": "qa/final/four-book-page-review-ledger-final.json"
+  }
+}

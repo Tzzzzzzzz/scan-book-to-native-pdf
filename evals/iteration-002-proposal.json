@@ -1,0 +1,21 @@
+{
+  "action": "patch",
+  "name": "scan-book-to-native-pdf",
+  "edits": [
+    {
+      "op": "replace",
+      "target": "Record page-count policy, figure-label policy, review depth, and cleanup policy.",
+      "content": "Record page-count policy, figure-label policy, review depth, and cleanup policy; never impose an arbitrary page-count ceiling when exhaustive fidelity is requested."
+    },
+    {
+      "op": "replace",
+      "target": "require `native_or_mixed`, never image-only or sparse-overlay classifications.",
+      "content": "require native text on every text-bearing page. Accept `native_or_mixed` or a documented `mixed_native_and_raster` result when only intentional artwork remains; reject image-only body output or sparse-overlay-only text."
+    },
+    {
+      "op": "replace",
+      "target": "Resolve every warning at readable zoom.",
+      "content": "Resolve every warning at readable zoom and record its page, box, class, evidence, and disposition."
+    }
+  ]
+}

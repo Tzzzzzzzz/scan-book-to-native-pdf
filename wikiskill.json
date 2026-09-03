@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "method": "WikiSkill",
+  "method_source": "https://arxiv.org/abs/2608.27454",
+  "package_mapping": {
+    "raw_layer": "raw",
+    "wiki_layer": "wiki",
+    "skills_layer": ".",
+    "active_skill": "scan-book-to-native-pdf"
+  },
+  "access_policy": {
+    "inference": [
+      "SKILL.md",
+      "references/workflow.md",
+      "references/ocr-layout-model.md",
+      "references/qa-gates.md",
+      "references/paired-gold-training.md",
+      "agents/openai.yaml",
+      "assets/xiangshan-v1-v239-profile.json",
+      "scripts/_pdf_utils.py",
+      "scripts/pdf_nativity.py",
+      "scripts/pdf_inventory.py",
+      "scripts/font_audit.py",
+      "scripts/compare_pdf_revisions.py",
+      "scripts/bbox_audit.py",
+      "scripts/render_band_audit.py",
+      "scripts/replace_pdf_page.py",
+      "scripts/build_paired_split.py",
+      "scripts/learn_gold_profile.py",
+      "scripts/ocr_gold_probe.py"
+    ],
+    "maintainer_and_proposer": [
+      "raw",
+      "wiki",
+      "SKILL.md",
+      "PURPOSE.md",
+      "evals",
+      "references/evolution-protocol.md",
+      "scripts/gate_candidate.py",
+      "scripts/skill_revision.py",
+      "scripts/validate_wikiskill.py"
+    ]
+  },
+  "gating": {
+    "split": "validation",
+    "acceptance_rule": "candidate_macro_mean > incumbent_macro_mean",
+    "rollback_skill_on_rejection": true,
+    "retain_wiki_on_rejection": true
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "profile_name": "xiangshan-vol1-v239-publication",
+  "conditional_profile": true,
+  "content_authority": "source_scan",
+  "style_authority": "paired_gold_training_pages",
+  "source": {
+    "file": "RISC-V CPU芯片设计 香山源代码剖析 第1卷.pdf",
+    "sha256": "FBD6C416C1ABB3763A4175B742E6D14595F2B181E4226FF34AC9DF2E63A1D86E",
+    "pages": 648
+  },
+  "gold": {
+    "file": "RISC-V_CPU_Xiangshan_Vol1_native_reconstructed_checked_v239.pdf",
+    "sha256": "43C41CC388C75D727554E412E2A4B1EF4E970DDE33E999DE82BDE598E0862FF0",
+    "pages": 648
+  },
+  "split_manifest_sha256": "D3A2D6AF43ABF503A528F5E0488E098CECB3CF0B2A91DE559BC2459F10C197C3",
+  "derivation_split": "train",
+  "selected_pages": 452,
+  "page_geometry": {
+    "page_boxes": [
+      {
+        "width": 540.0,
+        "height": 798.12,
+        "pages": 451
+      },
+      {
+        "width": 540.0,
+        "height": 739.8,
+        "pages": 1
+      }
+    ],
+    "source_pixel_to_pdf_point_scale": {
+      "median_x": 0.54,
+      "median_y": 0.54,
+      "min_x": 0.54,
+      "max_x": 0.54,
+      "min_y": 0.54,
+      "max_y": 0.54
+    },
+    "median_text_margins_pt": {
+      "left": 13.5,
+      "right": 21.59,
+      "top": 36.192,
+      "bottom": 33.008
+    }
+  },
+  "roles": {
+    "cjk_body": {
+      "dominant_font": "SimSun",
+      "dominant_size_pt": 9.72,
+      "dominant_color": "[0.34, 0.34, 0.34]",
+      "font_distribution": [
+        {
+          "value": "SimSun",
+          "characters": 293373
+        },
+        {
+          "value": "NotoSerifSC",
+          "characters": 1
+        }
+      ],
+      "size_distribution": [
+        {
+          "value": 9.72,
+          "characters": 257539
+        },
+        {
+          "value": 9.23,
+          "characters": 6650
+        },
+        {
+          "value": 10.21,
+          "characters": 5984
+        },
+        {
+          "value": 9.15,
+          "characters": 3010
+        },
+        {
+          "value": 11.79,
+          "characters": 1577
+        },
+        {
+          "value": 9.96,
+          "characters": 924
+        },
+        {
+          "value": 9.48,
+          "characters": 882
+        },
+        {
+          "value": 10.47,
+          "characters": 432
+        },
+        {
+          "value": 10.45,
+          "characters": 429
+        },
+        {
+          "value": 10.43,
+          "characters": 385
+        },
+        {
+          "value": 10.44,
+          "characters": 356
+        },
+        {
+          "value": 11.66,
+          "characters": 351
+        }
+      ],
+      "color_distribution": [
+        {
+          "value": "[0.34, 0.34, 0.34]",
+          "characters": 202802
+        },
+        {
+          "value": "[0.3608, 0.3608, 0.3608]",
+          "characters": 82450
+        },
+        {
+          "value": "[0.3216, 0.3216, 0.3216]",
+          "characters": 8122
+        }
+      ]
+    },
+    "code": {
+      "dominant_font": "Consolas",
+      "dominant_size_pt": 9.2,
+      "dominant_color": "[0.32, 0.32, 0.32]",
+      "font_distribution": [
+        {
+          "value": "Consolas",
+          "characters": 387658
+        }
+      ],
+      "size_distribution": [
+        {
+          "value": 9.2,
+          "characters": 387656
+        },
+        {
+          "value": 4.0,
+          "characters": 2
+        }
+      ],
+      "color_distribution": [
+        {
+          "value": "[0.32, 0.32, 0.32]",
+          "characters": 387658
+        }
+      ]
+    },
+    "latin_body": {
+      "dominant_font": "TimesNewRoman",
+      "dominant_size_pt": 9.72,
+      "dominant_color": "[0.34, 0.34, 0.34]",
+      "font_distribution": [
+        {
+          "value": "TimesNewRoman",
+          "characters": 203578
+        },
+        {
+          "value": "SimSun",
+          "characters": 39668
+        },
+        {
+          "value": "TimesNewRomanBold",
+          "characters": 23
+        }
+      ],
+      "size_distribution": [
+        {
+          "value": 9.72,
+          "characters": 202096
+        },
+        {
+          "value": 10.21,
+          "characters": 3365
+        },
+        {
+          "value": 9.15,
+          "characters": 3002
+        },
+        {
+          "value": 11.66,
+          "characters": 2919
+        },
+        {
+          "value": 11.79,
+          "characters": 2756
+        },
+        {
+          "value": 9.23,
+          "characters": 2053
+        },
+        {
+          "value": 11.52,
+          "characters": 1065
+        },
+        {
+          "value": 9.96,
+          "characters": 1057
+        },
+        {
+          "value": 8.1,
+          "characters": 425
+        },
+        {
+          "value": 8.26,
+          "characters": 371
+        },
+        {
+          "value": 8.24,
+          "characters": 357
+        },
+        {
+          "value": 8.14,
+          "characters": 353
+        }
+      ],
+      "color_distribution": [
+        {
+          "value": "[0.34, 0.34, 0.34]",
+          "characters": 184408
+        },
+        {
+          "value": "[0.3608, 0.3608, 0.3608]",
+          "characters": 40589
+        },
+        {
+          "value": "[0.3216, 0.3216, 0.3216]",
+          "characters": 18272
+        }
+      ]
+    }
+  },
+  "retained_image_pages_in_split": 25,
+  "rules": [
+    "Apply this profile only to the same publication series or after independent style matching.",
+    "Never use the gold wording to override source pixels.",
+    "Keep code point size fixed; use bounded width fitting or reflow."
+  ]
+}

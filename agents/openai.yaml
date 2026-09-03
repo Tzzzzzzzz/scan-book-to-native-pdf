@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scan Book to Native PDF"
+  short_description: "Rebuild scanned books as publication-grade native PDFs"
+  default_prompt: "Use $scan-book-to-native-pdf to reconstruct this scanned technical book as a source-faithful native PDF with full-page QA."

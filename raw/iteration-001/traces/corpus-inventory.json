@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "observed_on": "2026-09-01",
+  "documents": [
+    {
+      "role": "paired_source_and_content_authority",
+      "file": "RISC-V CPU芯片设计 香山源代码剖析 第1卷.pdf",
+      "bytes": 218082238,
+      "pages": 648,
+      "sha256": "FBD6C416C1ABB3763A4175B742E6D14595F2B181E4226FF34AC9DF2E63A1D86E",
+      "classification": "scan_image_only",
+      "image_pages": 648,
+      "extractable_text_pages": 0,
+      "full_page_image_distribution": [
+        {"pixels": [1000, 1478], "pages": 646},
+        {"pixels": [1000, 1370], "pages": 2}
+      ]
+    },
+    {
+      "role": "same_series_generalization",
+      "file": "RISC-V CPU芯片设计 香山源代码剖析 第2卷.pdf",
+      "bytes": 161287001,
+      "pages": 608,
+      "sha256": "348592523B5C238B25D2D72072A1F389FF43FC134D4DE1608D588AB2C0439F6F",
+      "classification": "scan_image_only",
+      "image_pages": 608,
+      "extractable_text_pages": 0,
+      "pdf_page_box_points": [751.181, 1088.5],
+      "full_page_image_distribution": [
+        {"pixels": [1000, 1450], "pages": 606},
+        {"pixels": [1000, 1366], "pages": 2}
+      ]
+    },
+    {
+      "role": "same_series_generalization",
+      "file": "RISC-V CPU芯片设计 香山源代码剖析 第3卷.pdf",
+      "bytes": 122068452,
+      "pages": 516,
+      "sha256": "E2F0E89078A1576F48E38DC2D88E1A8D5A27741B45957FF29D60AB26A4EEB1B2",
+      "classification": "scan_image_only",
+      "image_pages": 516,
+      "extractable_text_pages": 0,
+      "pdf_page_box_points": [595.276, 841.89],
+      "full_page_image_distribution": [
+        {"pixels": [1000, 1450], "pages": 514},
+        {"pixels": [1000, 1373], "pages": 2}
+      ]
+    },
+    {
+      "role": "cross_domain_generalization",
+      "file": "从零构建AI Agent大模型驱动的智能体设计与实战xins_new.pdf",
+      "bytes": 148610942,
+      "pages": 163,
+      "sha256": "6D38014FAE92B140280DE7B7146BF87362ACDED63B5A5DD6F843CB05E7B91D33",
+      "classification": "scan_with_sparse_native_overlay",
+      "image_pages": 163,
+      "extractable_text_pages": 163,
+      "median_extractable_characters": 11,
+      "recurring_short_text": {"text": "wx ebook-pdf", "pages": 163},
+      "observation": "Every page retains a large scan image; the repeated native watermark is not body text."
+    },
+    {
+      "role": "paired_gold_style_and_structure_only",
+      "file": "RISC-V_CPU_Xiangshan_Vol1_native_reconstructed_checked_v239.pdf",
+      "bytes": 3912934,
+      "pages": 648,
+      "sha256": "43C41CC388C75D727554E412E2A4B1EF4E970DDE33E999DE82BDE598E0862FF0",
+      "classification": "native_or_mixed",
+      "image_pages": 39,
+      "extractable_text_pages": 647,
+      "median_extractable_characters": 1912.5,
+      "pdf_page_box_distribution": [
+        {"points": [540.0, 798.12], "pages": 646},
+        {"points": [540.0, 739.8], "pages": 2}
+      ],
+      "font_audit": {"font_resources": 8, "missing_embedded": 0, "missing_tounicode": 0}
+    }
+  ]
+}

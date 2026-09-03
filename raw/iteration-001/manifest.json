@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "iteration": 1,
+  "immutable": true,
+  "trace_policy": "observable_actions_and_outputs_only",
+  "files": [
+    {
+      "path": "raw/iteration-001/traces/corpus-inventory.json",
+      "sha256": "2EEFB853E05B09D492DF4B6EDBC48D0DDE236EEF7B85FCD86A5D95649C230E94"
+    },
+    {
+      "path": "raw/iteration-001/traces/paired-training-results.md",
+      "sha256": "DB7C7898930D8465642E86433CE4D6404C86C712778753008F914518AAFA9EB2"
+    },
+    {
+      "path": "raw/iteration-001/traces/user-contract.md",
+      "sha256": "1F4FFA8573A8848BA5E79FB614073CD8A65122E9FA2E6D8C709613FB054BD268"
+    }
+  ],
+  "paired_evidence": {
+    "source_sha256": "FBD6C416C1ABB3763A4175B742E6D14595F2B181E4226FF34AC9DF2E63A1D86E",
+    "gold_sha256": "43C41CC388C75D727554E412E2A4B1EF4E970DDE33E999DE82BDE598E0862FF0",
+    "train_pages": 452,
+    "validation_pages": 98,
+    "sealed_test_pages": 98
+  }
+}

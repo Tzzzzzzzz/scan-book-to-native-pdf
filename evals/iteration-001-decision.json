@@ -1,0 +1,26 @@
+{
+  "valid_comparison": true,
+  "iteration": "001",
+  "target": "scan-book-to-native-pdf",
+  "proposal_sha256": "C0C2E53A2448341AACF8694B96A3DE05A5D89BCDD16B4DC352075844735ABC48",
+  "eval_definition_sha256": "4C68C65406C9C52AF090633B837777570041BC286FE691CE5ECD98E39CC1DF9F",
+  "validation_case_ids": [
+    "val-cleanup-after-delivery",
+    "val-four-corpus-nativity",
+    "val-local-fix-changes-page-box",
+    "val-long-code-line-consistency",
+    "val-mixed-diagram-label-cleaning",
+    "val-ocr-punctuation-is-not-publishable",
+    "val-paired-profile-heldout",
+    "val-per-page-pixel-geometry",
+    "val-reference-is-style-only"
+  ],
+  "incumbent_revision": "5B706786C9E19B2855FE89453C0DCACB027124518EAC7276315057331AFA008D",
+  "candidate_revision": "22562C6A40D914895851A3FD696BB9C9A86CA7E7E05251222F90D5083006E12A",
+  "incumbent_macro_mean": "0.6944444444444444444444444444",
+  "candidate_macro_mean": "1.0",
+  "delta": "0.3055555555555555555555555556",
+  "decision": "accept",
+  "rollback_skill": false,
+  "retain_wiki": true
+}

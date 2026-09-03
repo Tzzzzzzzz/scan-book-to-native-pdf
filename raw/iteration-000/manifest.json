@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "iteration": 0,
+  "immutable": true,
+  "trace_policy": "observable_actions_and_outputs_only",
+  "files": [
+    {
+      "path": "raw/iteration-000/traces/user-feedback.md",
+      "sha256": "1418AB2D07F06F8221544670D179754783D7E2422B46A0D60574C7EA30BE2230"
+    },
+    {
+      "path": "raw/iteration-000/traces/verification-results.md",
+      "sha256": "B5E2197A5542DE143EA3A3F57507A5D1F51C2A0515CC2A42E3F89CB75771F662"
+    }
+  ],
+  "artifact_evidence": {
+    "final_file": "RISC-V_CPU_Xiangshan_Vol1_native_reconstructed_checked_v239.pdf",
+    "pages": 648,
+    "sha256": "43C41CC388C75D727554E412E2A4B1EF4E970DDE33E999DE82BDE598E0862FF0"
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "train-visible-native-not-hidden-ocr",
+      "split": "train",
+      "origin": "raw/iteration-000/traces/user-feedback.md#O-002",
+      "prompt": "Convert a scanned chapter into a native PDF; invisible OCR is explicitly prohibited.",
+      "required_behaviors": ["Remove raster body glyphs", "Draw visible native text", "Audit residual image text"],
+      "forbidden_behaviors": ["Return a full-page scan with hidden OCR", "Place visible text over unchanged raster glyphs"]
+    },
+    {
+      "id": "train-overlap-and-style-repair",
+      "split": "train",
+      "origin": "raw/iteration-000/traces/user-feedback.md#O-003",
+      "prompt": "Repair doubled text and inconsistent body/code size and darkness in an existing candidate.",
+      "required_behaviors": ["Locate raster residue", "Use shared typography styles", "Patch affected content incrementally"],
+      "forbidden_behaviors": ["Rebuild all verified pages", "Fit every line independently"]
+    },
+    {
+      "id": "train-exhaustive-source-review",
+      "split": "train",
+      "origin": "raw/iteration-000/traces/user-feedback.md#O-005",
+      "prompt": "Check every page and every word against the scan, not a sample.",
+      "required_behaviors": ["Render every page", "Maintain page and exception ledgers", "Resolve exceptions visually"],
+      "forbidden_behaviors": ["Claim completion from representative sampling"]
+    },
+    {
+      "id": "train-incremental-local-correction",
+      "split": "train",
+      "origin": "raw/iteration-000/traces/user-feedback.md#O-006",
+      "prompt": "Correct one source-confirmed code line without disturbing already checked pages.",
+      "required_behaviors": ["Freeze a baseline", "Replace the smallest object or page", "Compare unexpected page differences"],
+      "forbidden_behaviors": ["Regenerate the entire book"]
+    },
+    {
+      "id": "train-paired-gold-stratified-split",
+      "split": "train",
+      "origin": "raw/iteration-001/traces/paired-training-results.md#Paired-split",
+      "prompt": "Learn a reconstruction method from a 648-page scan and its checked native counterpart without leaking viewed pages into validation or test.",
+      "required_behaviors": ["Hash the pair", "Freeze a deterministic category-stratified split", "Force all previously viewed pages into training"],
+      "forbidden_behaviors": ["Tune on validation pages", "Browse test pages before choices are frozen"]
+    },
+    {
+      "id": "train-sparse-overlay-is-still-scan",
+      "split": "train",
+      "origin": "raw/iteration-001/traces/corpus-inventory.json",
+      "prompt": "A PDF has a full-page image on every page and extractable text consisting primarily of a repeated watermark. Classify it before reconstruction.",
+      "required_behaviors": ["Measure image coverage and extractable text", "Detect recurring sparse text", "Classify body content as scanned"],
+      "forbidden_behaviors": ["Call the book native because pdftotext returns a watermark"]
+    },
+    {
+      "id": "train-ocr-backend-smoke-test",
+      "split": "train",
+      "origin": "raw/iteration-001/traces/paired-training-results.md#OCR-probes",
+      "prompt": "Select an OCR hypothesis generator for dense Chinese/Scala technical pages when one backend may fail at initialization.",
+      "required_behaviors": ["Smoke-test real pages", "Compare semantic and punctuation CER", "Keep a tested fallback and correct against source pixels"],
+      "forbidden_behaviors": ["Select by reputation alone", "Publish raw OCR"]
+    },
+    {
+      "id": "train-conditional-series-profile",
+      "split": "train",
+      "origin": "raw/iteration-001/traces/paired-training-results.md#Training-profile",
+      "prompt": "Use a checked Vol1 reconstruction to improve later books in the same publication series while also handling an unrelated AI book.",
+      "required_behaviors": ["Learn aggregate style only", "Condition profile use on series/style evidence", "Derive a new profile for unrelated layouts"],
+      "forbidden_behaviors": ["Copy gold wording", "Apply Xiangshan typography blindly to every book"]
+    },
+    {
+      "id": "val-reference-is-style-only",
+      "split": "validation",
+      "origin": "held-out",
+      "prompt": "The reference e-book spells a technical term differently from the scan. Decide which wording enters the reconstructed book.",
+      "required_behaviors": ["Use scan wording", "Use reference only for style", "Retain source evidence"],
+      "forbidden_behaviors": ["Copy reference wording without source support"]
+    },
+    {
+      "id": "val-mixed-diagram-label-cleaning",
+      "split": "validation",
+      "origin": "held-out",
+      "prompt": "Make labels in a diagram native while preserving arrows that cross the label boxes.",
+      "required_behaviors": ["Use glyph-shaped masks", "Preserve or reconstruct connectors", "Inspect the cleaned crop"],
+      "forbidden_behaviors": ["Erase whole OCR rectangles", "Leave old labels under new text"]
+    },
+    {
+      "id": "val-long-code-line-consistency",
+      "split": "validation",
+      "origin": "held-out",
+      "prompt": "A single code line exceeds the source column after font replacement while neighboring code already matches publication style.",
+      "required_behaviors": ["Keep shared code point size and tone", "Use bounded width fitting or reflow", "Verify comments and baselines"],
+      "forbidden_behaviors": ["Shrink only that line without documentation"]
+    },
+    {
+      "id": "val-local-fix-changes-page-box",
+      "split": "validation",
+      "origin": "held-out",
+      "prompt": "A source-backed correction forces page geometry to change. Define the regression scope.",
+      "required_behaviors": ["Check all downstream structure", "Verify boxes, order, links, outlines, extraction, and renders", "Retain the prior baseline"],
+      "forbidden_behaviors": ["Inspect only the edited text object"]
+    },
+    {
+      "id": "val-cleanup-after-delivery",
+      "split": "validation",
+      "origin": "held-out",
+      "prompt": "Remove unnecessary intermediates after delivering the final PDF.",
+      "required_behaviors": ["Require explicit authorization", "Verify final hash before and after cleanup", "Resolve exact targets and inventory survivors"],
+      "forbidden_behaviors": ["Delete source or final artifact", "Use a broad unresolved recursive target"]
+    },
+    {
+      "id": "val-paired-profile-heldout",
+      "split": "validation",
+      "origin": "raw/iteration-001/traces/paired-training-results.md#Held-out-validation",
+      "prompt": "Check whether a profile learned only from 452 training pages reproduces on 98 untouched validation pages.",
+      "required_behaviors": ["Recompute the profile on validation pages", "Compare scale, body/code faces, sizes, and tones", "Reject unexplained drift"],
+      "forbidden_behaviors": ["Relearn the profile from all 648 pages"]
+    },
+    {
+      "id": "val-four-corpus-nativity",
+      "split": "validation",
+      "origin": "raw/iteration-001/traces/corpus-inventory.json",
+      "prompt": "Classify three image-only Xiangshan scans, one scanned book with a repeated native watermark, and the checked Vol1 native reconstruction.",
+      "required_behaviors": ["Return image-only scan for Vol1/2/3", "Return sparse-native-overlay scan for the AI book", "Return native-or-mixed for v239"],
+      "forbidden_behaviors": ["Infer nativity from the mere presence of any text operator"]
+    },
+    {
+      "id": "val-ocr-punctuation-is-not-publishable",
+      "split": "validation",
+      "origin": "raw/iteration-001/traces/paired-training-results.md#Held-out-validation",
+      "prompt": "Held-out OCR has low average semantic CER but nonzero punctuation CER on technical pages. Decide whether it can be published directly.",
+      "required_behaviors": ["Treat CER as diagnostic", "Inspect every punctuation and identifier difference", "Require source-backed correction to zero known errors"],
+      "forbidden_behaviors": ["Accept raw OCR because average CER is low"]
+    },
+    {
+      "id": "val-per-page-pixel-geometry",
+      "split": "validation",
+      "origin": "raw/iteration-001/traces/paired-training-results.md#Held-out-validation",
+      "prompt": "Source PDF MediaBoxes differ across volumes, while the accepted reconstruction follows each page image canvas at a stable publication scale.",
+      "required_behaviors": ["Measure source image pixels", "Apply the validated pixel-to-point scale per page", "Recheck page boxes and downstream structure"],
+      "forbidden_behaviors": ["Blindly copy inconsistent source MediaBoxes"]
+    },
+    {
+      "id": "val-render-exception-disposition",
+      "split": "validation",
+      "origin": "raw/iteration-002/traces/exception-triage.json",
+      "prompt": "A complete source/candidate render comparison flags repeated watermarks, scan-edge speckles, a baseline shift, and contrast changes inside preserved figures. Decide whether the book can pass.",
+      "required_behaviors": ["Enumerate every warning", "Inspect source and candidate crops", "Record class, evidence, and disposition", "Block true missing or altered content"],
+      "forbidden_behaviors": ["Require zero raw band warnings without triage", "Silently ignore all warnings"]
+    },
+    {
+      "id": "val-mixed-native-raster-output",
+      "split": "validation",
+      "origin": "raw/iteration-002/traces/final-qa-observations.md#Final-QA-Observations",
+      "prompt": "An unrelated scanned book has native text on all text-bearing pages but intentionally retained raster covers and figures. Define the nativity gate.",
+      "required_behaviors": ["Distinguish body text from intentional artwork", "Allow documented mixed_native_and_raster output", "Reopen and document image-only artwork pages", "Forbid hidden OCR and raster body text"],
+      "forbidden_behaviors": ["Reject every image-bearing page", "Call a repeated watermark native body text", "Leave scanned body text under replacements"]
+    },
+    {
+      "id": "val-exhaustive-review-no-page-ceiling",
+      "split": "validation",
+      "origin": "raw/iteration-002/traces/user-contract.md#Observable-User-Contract",
+      "prompt": "The corpus contains four books totaling 1,935 pages and the user requests word-by-word review. Set the review scope.",
+      "required_behaviors": ["Review every source/final page", "Keep one row per page and every exception", "Permit page-count or geometry adjustments when needed"],
+      "forbidden_behaviors": ["Cap review at 648 pages", "Substitute sampling for exhaustive review"]
+    },
+    {
+      "id": "test-extractor-invents-space",
+      "split": "test",
+      "origin": "held-out",
+      "prompt": "Text extraction adds a space between adjacent code runs after a font change although the render looks close.",
+      "required_behaviors": ["Inspect run geometry and raw strings", "Restore physical advance when appropriate", "Verify render and extraction"],
+      "forbidden_behaviors": ["Edit semantic source text without pixel evidence"]
+    },
+    {
+      "id": "test-clean-audits-with-raster-caption",
+      "split": "test",
+      "origin": "held-out",
+      "prompt": "All structural audits pass, but a figure caption may still be raster text.",
+      "required_behaviors": ["Inspect source and candidate visually", "Apply the explicit figure-text policy", "Document intentional raster text"],
+      "forbidden_behaviors": ["Declare exact fidelity solely from clean audit summaries"]
+    },
+    {
+      "id": "test-shared-font-resource-patch",
+      "split": "test",
+      "origin": "held-out",
+      "prompt": "A one-page correction modifies a shared embedded font resource.",
+      "required_behaviors": ["Expand checks to the whole book", "Audit embedding and ToUnicode", "Compare unrelated pages"],
+      "forbidden_behaviors": ["Assume resource changes are page-local"]
+    },
+    {
+      "id": "test-unseen-paired-dense-code",
+      "split": "test",
+      "origin": "evals/paired-vol1-pages.json#test",
+      "prompt": "Evaluate the frozen OCR/layout method on previously unopened Vol1 dense-code and mixed-code pages.",
+      "required_behaviors": ["Use the frozen method once", "Report semantic and punctuation errors", "Do not tune after disclosure"],
+      "forbidden_behaviors": ["Move failed test pages into training", "Claim raw OCR is final fidelity"]
+    },
+    {
+      "id": "test-cross-volume-series-transfer",
+      "split": "test",
+      "origin": "raw/iteration-001/traces/corpus-inventory.json",
+      "prompt": "Prepare Xiangshan Vol2 and Vol3 with the Vol1-derived publication profile.",
+      "required_behaviors": ["Confirm same-series visual evidence", "Recompute per-page geometry from source pixels", "Keep each volume's scan as semantic authority"],
+      "forbidden_behaviors": ["Copy Vol1 content", "Assume identical source MediaBoxes"]
+    },
+    {
+      "id": "test-cross-domain-sparse-overlay",
+      "split": "test",
+      "origin": "raw/iteration-001/traces/corpus-inventory.json",
+      "prompt": "Prepare an unrelated AI book whose pages are scans with a native repeated watermark, diagrams, and QR artwork.",
+      "required_behaviors": ["Classify the watermark separately from body text", "Derive a new layout/style profile", "Preserve genuine artwork while rebuilding body text"],
+      "forbidden_behaviors": ["Use the Xiangshan profile without evidence", "Treat watermark extraction as native body content"]
+    }
+  ]
+}
